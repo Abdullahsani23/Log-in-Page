@@ -1,0 +1,36 @@
+body {
+    background-image: url(images/image3.jpg);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+align-items: center;
+    /* background: #363030; */
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+    
+}
+.container{
+    /* border: 2px solid red; */
+    width: 300px;
+}
+
+.loginForm{
+    /* display: none; */
+    flex-direction: column;
+}
+input{
+    margin: 3px 0;
+    padding: 5px 0;
+}
+button{
+    padding: 8px;
+    color: white;
+    background-color: #f0397f;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    background-color:#ee0b5e ;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(images/image2.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, <span id="user-name"></span>!</h1>
+        <button onclick="logout()">Log-out</button>
+    </div>
+    <script>
+window.onload = function() {
+    const firstName = localStorage.getItem('firstname');
+    const lastName = localStorage.getItem('lastname');
+    if (firstName && lastName) {
+        document.getElementById('user-name').textContent = `${firstName} ${lastName}`;
+    } else {
+        document.getElementById('user-name').textContent = 'Guest';
+    }
+}
+function logout() {
+    localStorage.removeItem('currentUser');
+    window.location = "index.html"; // Redirect to login page after logout
+}
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-Page</title>
+</head>
+<body>
+    <div>
+        <h1> welcome To Home Page </h1>
+    </div>
+    <script>
+        console.log("welocome"+ localStorage.getItem("name" + "lname"));
+    </script>
+</body>
+</html> -->
